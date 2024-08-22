@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Neo Sans Std Black Italic";
+  src: url("./fonts/NeoSansStdBlackItalicTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdBlackItalicTR.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Black";
+  src: url("./fonts/NeoSansStdBlackTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdBlackTR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Bold Italic";
+  src: url("./fonts/NeoSansStdBoldItalicTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdBoldItalicTR.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Bold";
+  src: url("./fonts/NeoSansStdBoldTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdBoldTR.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Italic";
+  src: url("./fonts/NeoSansStdItalicTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdItalicTR.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Medium Italic";
+  src: url("./fonts/NeoSansStdMediumItalicTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdMediumItalicTR.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Medium";
+  src: url("./fonts/NeoSansStdMediumTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdMediumTR.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Ultra Italic";
+  src: url("./fonts/NeoSansStdUltraItalicTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdUltraItalicTR.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std Ultra";
+  src: url("./fonts/NeoSansStdUltraTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdUltraTR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neo Sans Std";
+  src: url("./fonts/NeoSansStdTR.woff2") format("woff2"),
+    url("./fonts/NeoSansStdTR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Neo Sans Std", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox container for main content and sidebar */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* General adjustments for a responsive layout */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: padding 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(
+    150deg,
+    #ffffff 5%,
+    #eec3a3 27%,
+    #eaa56d 86%,
+    #e56b01 99%
+  );
+  transition: width 0.3s;
+}
+
+/* Menu items */
+.sidebar .menu-item {
+  font-family: "Neo Sans Std Bold";
+  padding: 10px;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive Design */
+
+/* Adaptation for screens with a width of 1050px or less */
+@media screen and (max-width: 1050px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .menu-item {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Adaptation for screens with a width of 800px or less */
+@media screen and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Adaptation for screens with a width of 480px or less */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .menu-item {
+    font-size: 0.7rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
+}
