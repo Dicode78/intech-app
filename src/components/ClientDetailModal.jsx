@@ -29,18 +29,18 @@ const ClientDetailModal = ({ open, onClose, client }) => {
       <Box
         sx={{
           position: "relative",
-          margin: "0 auto", // Centrer le modal horizontalement
+          margin: "0 auto",
           width: {
-            xs: "calc(100% - 20px)", // Pour très petits écrans
-            sm: "calc(100% - 40px)", // Pour petits écrans
-            md: "calc(100% - 60px)", // Pour écrans moyens
-            lg: "calc(82% - 70px)", // Pour grands écrans (1200px et plus)
-            xl: "calc(100% - 320px)", // Pour écrans extra-larges
+            xs: "calc(100% - 20px)",
+            sm: "calc(100% - 40px)",
+            md: "calc(100% - 60px)",
+            lg: "calc(82% - 70px)",
+            xl: "calc(100% - 320px)",
           },
-          maxWidth: "100%", // Limite la largeur pour qu'elle ne s'étire pas trop sur des très grands écrans
+          maxWidth: "100%",
           height: "calc(100vh - 150px)",
           marginLeft: {
-            lg: "285px", // Appliquer une marge à gauche pour les grands écrans (1200px et plus)
+            lg: "285px",
           },
           display: "flex",
           alignItems: "center",

@@ -82,6 +82,31 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Endpoint pour renouveler le token
+router.post("/renew-token", (req, res) => {
+  const { token } = req.body;
+
+  if (!token) {
+    return res.status(400).json({ message: "Token is required" });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // Créez un nouveau token
+    const newToken = jwt.sign(
+      { id: decoded.id, role: decoded.role },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    res.json({ token: newToken });
+  } catch (e) {
+    console.error("Token renewal error:", e);
+    res.status(401).json({ message: "Invalid or expired token" });
+  }
+});
+
 // Endpoint pour la page d'accueil
 router.get("/homepage", authenticateJWT, (req, res) => {
   res.json({ message: "Welcome to the homepage!" });

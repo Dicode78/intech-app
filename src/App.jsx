@@ -13,22 +13,20 @@ import PrivateRoute from "./components/PrivateRoute"; // Importez PrivateRoute
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/homepage" element={<HomePage />} />{" "}
-        {/* Pas de PrivateRoute ici */}
-        <Route
-          path="/user-management"
-          element={<PrivateRoute element={UserManagementPage} />}
-        />
-        <Route
-          path="/client-management"
-          element={<PrivateRoute element={ClientManagementPage} />}
-        />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/homepage" element={<HomePage />} />{" "}
+      {/* Pas de PrivateRoute ici */}
+      <Route
+        path="/user-management"
+        element={<PrivateRoute element={UserManagementPage} />}
+      />
+      <Route
+        path="/client-management"
+        element={<PrivateRoute element={ClientManagementPage} />}
+      />
+    </Routes>
   );
 }
 
